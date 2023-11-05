@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*:::::Pie de Pagina*/
+.pie-pagina {
+    color: #fff;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 20px;
+    /* Añade un poco de padding horizontal */
+    background: linear-gradient(145deg, #6e3cb6, #b41c8e);
+}
+
+/* Estilos de figuras e imágenes */
+.pie-pagina .grupo-1 .box figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    max-width: 100%;
+    /* Asegura que la imagen es responsive */
+    height: auto;
+}
+
+/* Estilos de texto */
+.pie-pagina .grupo-1 .box h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    margin-bottom: 10px;
+}
+
+/* Contenedor de redes sociales */
+.pie-pagina .grupo-1 .box .red-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que los íconos se envuelvan en pantallas pequeñas */
+}
+
+/* Estilo para los íconos individuales */
+.pie-pagina .grupo-1 .red-social .icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 10px 10px;
+    /* Añade espaciado vertical para envoltura */
+    background-color: #4e267b;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustes al interactuar */
+.pie-pagina .grupo-1 .red-social .icon:hover {
+    background-color: #ffffff;
+    color: #6e3cb6;
+}
+
+/* Ajuste para los íconos SVG */
+.pie-pagina .grupo-1 .red-social .icon svg {
+    width: 20px;
+    height: auto;
+}
+
+/* Estilos del grupo de texto legal */
+.pie-pagina .grupo-2 {
+    background-color: #4e267b;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        grid-template-columns: 1fr;
+        /* Columna única para todo */
+        grid-gap: 30px;
+    }
+
+    .pie-pagina .grupo-1 .box {
+        padding: 0 20px;
+        /* Añade padding para no pegar el contenido a los bordes */
+    }
+
+    /* Ajusta el tamaño de los íconos y el espaciado en dispositivos pequeños */
+    .pie-pagina .grupo-1 .red-social .icon {
+        width: 40px;
+        /* Más pequeños para caber en pantallas estrechas */
+        height: 40px;
+        margin: 0 8px 8px;
+        /* Menos margen para maximizar el espacio */
+    }
+
+    .pie-pagina .grupo-1 .red-social .icon svg {
+        width: 18px;
+        /* Ligeramente más pequeños para coincidir con el nuevo tamaño del ícono */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Para teléfonos móviles, puedes querer un diseño aún más adaptado /
+    .pie-pagina .grupo-1 {
+    padding: 35px 15px; / Aumenta el padding para dar más espacio alrededor de los elementos */
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 120px;
+    /* Reduce el tamaño de la imagen del logo para móviles */
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    font-size: 18px;
+    /* Reduce el tamaño del texto para que se ajuste mejor */
+}
+
+.pie-pagina .grupo-1 .box p {
+    font-size: 14px;
+    /* Reduce el tamaño del texto para mayor legibilidad */
+}
+
+/* Reduce el tamaño de los íconos de las redes sociales para que se ajusten mejor en móviles /
+    .pie-pagina .grupo-1 .red-social .icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px 10px; / Reduce el espacio entre íconos */
+
+
+.pie-pagina .grupo-1 .red-social .icon svg {
+    width: 15px;
+    /* Ajusta el tamaño del SVG */
+}
+
+/* Si el texto legal es demasiado largo, puedes ajustar el tamaño aquí */
+.pie-pagina .grupo-2 small {
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .pie-pagina .grupo-1 .box figure img {
+        width: 100px; /* Reduce aún más el tamaño del logo */
+    }
+
+    .pie-pagina .grupo-1 .box p {
+        display: none; /* Oculta el párrafo en pantallas muy pequeñas */
+    }
+}

@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  width: 70%; /* El contenedor principal ahora ocupa el 70% */
+  margin: auto; /* Centrar el contenedor si es menor que el viewport */
+  height: 600px; /* Ajusta esto a tu preferencia */
+}
+
+.text-section {
+  width: 70%; /* Texto ocupa el 70% del contenedor */
+  display: flex;
+  align-items: center; /* Centrar el contenido de texto verticalmente */
+}
+
+.text-content { /* Contenedor interno para aplicar padding */
+  padding: 20px;
+}
+
+.carousel-section {
+  width: 30%; /* Carrusel ocupa el 30% del contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-main-image {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-main-image img {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.carousel-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid #333;
+}
+
+/* Añade estilos responsivos si es necesario */
+@media (max-width: 768px) {
+  .content-carousel-container {
+    flex-direction: column;
+  }
+
+  .text-section,
+  .carousel-section {
+    width: 100%;
+  }
+
+  .carousel-thumbnails {
+    overflow-x: auto;
+  }
+}

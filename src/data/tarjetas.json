@@ -1,0 +1,18 @@
+[
+    {
+      "key": "1",
+      "title": "Título del Acordeón 1",
+      "description": "Descripción detallada del contenido del Acordeón 1. Puede incluir información relevante que se quiera destacar para los usuarios."
+    },
+    {
+      "key": "2",
+      "title": "Título del Acordeón 2",
+      "description": "Descripción del segundo ítem del acordeón. Este texto sirve para explicar el contenido relacionado con el título del Acordeón 2."
+    },
+    {
+      "key": "3",
+      "title": "Título del Acordeón 3",
+      "description": "Aquí va la descripción para el tercer ítem del acordeón. Este debe ser informativo y conciso para mantener el interés del lector."
+    }
+  ]
+  

@@ -1,0 +1,146 @@
+.navbar {
+    background: linear-gradient(145deg, #6e3cb6, #b41c8e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 2rem;
+}
+
+.navbar.scrolled img{
+    height: 2.5em;
+
+}
+
+.nav-logo img {
+    height: 5em;
+    /* o el tamaño que prefieras para tu isotipo */
+    fill: rgb(180, 28, 28);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-logo {
+    color: #fff;
+    /* Letra blanca para el logo */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: auto;
+    /* Alinea el logo a la izquierda */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    /* Elimina los bullets de la lista */
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+    /* Posición relativa para el pseudo-elemento ::after */
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    /* Puedes añadir :focus para la accesibilidad */
+    color: #cccccc;
+    /* Un gris claro, por ejemplo, para el efecto hover */
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    /* Coloca la barra debajo del texto */
+    left: 0;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    /* Incluye :focus si deseas */
+    width: 100%;
+    /* Llena la barra al pasar el mouse */
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    /* Mantén el blanco al pasar el mouse */
+}
+
+.navbar.scrolled {
+    height: 65px;
+    /* Reduce la altura al hacer scroll */
+    background: #4e267b;
+    /* Fondo más oscuro al hacer scroll */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 2rem;
+        /* Mayor padding para dispositivos móviles */
+    }
+
+    .navbar.scrolled {
+        height: 190px;
+        /* Reduce la altura al hacer scroll */
+        background: #4e267b;
+        /* Fondo más oscuro al hacer scroll */
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Alineación de los items a la izquierda */
+    }
+
+    .nav-item {
+        padding: 0.5rem 0;
+    }
+}
+
+.nav-icon {
+    display: none; /* Esconde el ícono de hamburguesa por defecto */
+    font-size: 2rem; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-icon {
+        display: block; /* Muestra el ícono de hamburguesa en móviles */
+    }
+
+    .nav-links {
+        display: none; /* Oculta los enlaces en móviles */
+        flex-direction: column;
+        width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .nav-links.is-active {
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+    }
+
+    .nav-item {
+        padding: 1rem; /* Espacio alrededor de los enlaces para facilidad de clic */
+        width: 100%; /* Ocupa el ancho completo */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "title": "lorem",
+    "name": "lorem",
+    "description": "lorem,lorem,lorem,lorem,lorem,lorem,lorem,lorem",
+    "images": [
+        "../public/owen-beard.jpg",
+        "../public/possessed-photography.jpg",
+        "../public/santis.jpg"
+    ]
+}

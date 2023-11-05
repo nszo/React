@@ -1,0 +1,30 @@
+/* Estilo para la tarjeta */
+.tarjeta {
+    background-color: #ccc; /* Fondo gris */
+    width: 90%;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex; /* Usar flexbox para controlar el diseño */
+    justify-content: space-between; /* Espacio entre elementos izquierda y derecha */
+    align-items: center; /* Centrar verticalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para la parte izquierda */
+.izquierda {
+    width: 30%; /* Ocupa el 30% del ancho de la tarjeta */
+    height: 100%; /* Ocupa el 100% de la altura de la tarjeta */
+}
+
+/* Estilo para la imagen dentro de la parte izquierda */
+.foto {
+    width: 100%; /* Ocupa el 100% del ancho de la parte izquierda */
+    height: auto; /* Mantener la proporción original de la imagen */
+}
+
+/* Estilo para la parte derecha */
+.derecha {
+    width: 70%; /* Ocupa el 70% del ancho de la tarjeta */
+    height: 100%; /* Ocupa el 100% de la altura de la tarjeta */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+}
